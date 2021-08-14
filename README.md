@@ -4,3 +4,5 @@ pokedex app that allows a user to search a pokemon's name and displays informati
 Technologies Used: HTML, CSS, JavaScript & JQuery
 
 pokeapi used => https://pokeapi.co/
+
+Try it out LIVE here => https://anthonys-pokedex.herokuapp.com/
