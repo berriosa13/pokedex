@@ -1,5 +1,5 @@
 {
-  "name": "pokedex-app",
+  "name": "pokedex",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,9 +8,10 @@
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Anthony Berrios",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "bcrypt": "^5.0.1",
     "cjs-loader": "^0.1.0",
     "cookie-parser": "^1.4.5",
@@ -27,6 +28,8 @@
     "nodemon": "^2.0.12"
   },
   "engines": {
-    "node": "14.17.3"
+    "node": "14.x",
+    "npm": "7.x"
   }
 }
+ 
