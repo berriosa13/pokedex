@@ -13,29 +13,18 @@
     <link rel="stylesheet" href="stylesheets/progressBar.css">
     <link rel="manifest" href="javascript/manifest.json"/>
     <link rel="icon" href="images/icons/favicon.png"/>
-    <title>Pokedex</title>
+    <title>Pokedex-App</title>
   </head>
   <body>
     <div class="columns">
       <div class="column">
-        <button
-            class=" logout-button button is-danger is-rounded is-medium"
-            
-          >
-            <a class="logout-link" href="/logout">LOGOUT</a>
-        </button>
+        <form action="/logout">
+          <button type="submit" class="logout-button button is-danger is-rounded is-medium">
+            <img class="logout-icon" src="../images/logout2.png" alt="">
+            LOGOUT</button>
+        </form>
         
         <section class="search-section" style="width: fit-content;"></section>
-        <!-- <section class="hero is-link">
-          <div class="hero-body">
-            <p class="title">
-              Welcome to my Pokedex App,
-            </p>
-            <p style="text-align: center;" class="subtitle">
-              <%= user.name %>
-            </p>
-          </div>
-        </section> -->
         <div class="hero-body hero is-link">
           <p class="title">
             Welcome to my Pokedex App,
@@ -43,6 +32,7 @@
           <p style="text-align: center;" class="subtitle">
             <%= user.name %>
           </p>
+            <img class="user-image" src="<%= user.picture %>" alt="">  
         </div>
           <form autocomplete="on" class="box">
             <div class="field">
