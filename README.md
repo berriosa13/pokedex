@@ -1,7 +1,7 @@
 # pokedex-app
 pokedex app that allows a user to search a pokemon's name and displays information about that specific pokemon. 
 
-Technologies Used: HTML, CSS, JavaScript & JQuery
+Technologies Used: HTML, CSS, JavaScript, JQuery, Google Auth2.0
 
 pokeapi used => https://pokeapi.co/
 
