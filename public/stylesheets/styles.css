@@ -74,7 +74,6 @@ html {
   padding-top: 5rem;
 }
 .box {
-  width: fit-content;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -236,11 +235,16 @@ progress[role] {
   margin-bottom: 50px;
 }
 
-@media (max-width: 500px) {
+.column {
+  padding: 0 !important;
+  margin: auto;
+}
+
+/* @media (max-width: 500px) {
   form .field {
     width: 22rem;
   }
-}
+} */
 
 @media (max-width: 600px) {
   .stats-container {

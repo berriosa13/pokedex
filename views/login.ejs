@@ -45,11 +45,6 @@
         id="my-signin2"
         data-onsuccess="onSignIn"
       ></div>
-      <!-- <button class="button is-danger is-centered is-medium is-light google-login">
-        <a href="/auth/google">
-          <i class="fab fa-google left">Log in with Google</i>
-        </a>
-      </button> -->
       <div class="card-content"></div>
     </div>
 
@@ -58,44 +53,15 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
-    <script>
-      function onSuccess(googleUser) {
-        let id_token = googleUser.getAuthResponse().id_token;
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "/login");
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.onload = function () {
-          console.log("Signed in as: " + xhr.responseText);
-          if (xhr.responseText == "success") {
-            signOut();
-            location.assign("/pokedex");
-          }
-        };
-        xhr.send(JSON.stringify({ token: id_token }));
-      }
-      function onFailure(error) {
-        console.log(error);
-      }
 
-      function renderButton() {
-        gapi.signin2.render("my-signin2", {
-          scope: "profile email",
-          width: 240,
-          height: 50,
-          longtitle: true,
-          theme: "dark",
-          onsuccess: onSuccess,
-          onfailure: onFailure,
-        });
-      }
-    </script>
+    <script src="javascript/googleAuth.js"></script>
 
-    <!-- <a href="#" onclick="signOut();">Sign out</a> -->
     <script
       src="https://apis.google.com/js/platform.js?onload=renderButton"
       async
       defer
     ></script>
+
     <script src="javascript/googleSignOut.js"></script>
   </body>
 </html>
