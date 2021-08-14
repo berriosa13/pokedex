@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <title>Login</title>
+  </head>
+
+  <body class="vertical-center">
+    <div id="featured">
+      <video autoplay muted loop id="myVideo">
+        <source
+          class="overlay"
+          src="./assets/video/pexels-mr-borys-8295528.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+
+    <div class="card image-box rounded" style="width: 45rem">
+      <img
+        src="https://fontmeme.com/permalink/210729/8c92d652b67e3e5fe9ae253bd6e0b24a.png"
+        class="card-img-top home-image"
+        alt="home image"
+      />
+      <img
+        src="https://fontmeme.com/permalink/210729/d5bbd6962e6cbea2408df391fae3cbed.png"
+        class="card-img-top login-image"
+        alt=""
+      />
+
+      <div class="card-content">
+          <% if(messages.error) { %>
+            <%= messages.error %>
+          <% } %>
+        <form action="/login" method="POST">
+          <div class="field" style="margin: 32px;">
+            <div class="control">
+              <input
+                type="email"
+                class="input"
+                id="email-input"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+          </div>
+          <div class="field" style="margin: 32px;">
+            <div class="control">
+              <input
+                type="password"
+                class="input"
+                id="password-input"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div class="field is-grouped">
+            <button
+              type="submit"
+              class="button is-success is-light is-medium is-fullwidth"
+              id="login-button"
+            >
+              Log In
+            </button>
+            <button
+              type="submit"
+              class="button is-success is-light is-medium is-fullwidth"
+              id="register-button"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+.progress-bars {
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.attribute {
+    margin-right: 10px;
+    color: black;
+    font-weight: bold;
+}
+progress::-webkit-progress-bar {
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+progress[role]:after {
+    background-image: none;
+}
+progress[role] strong {
+    display: none;
+}
+progress::-webkit-progress-value {
+    background-color: white;
+    border-radius: 10px;
+}
+.progress-value {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)ss;
+    font-size: calc(1rem / 1.5);
+    line-height: 1rem;
+    font-weight: bold;
+}
+.progress.is-small + .progress-value {
+    font-size: calc(1.25rem / 1.5);
+}
+
+.fire::-webkit-progress-value {
+    background-color: #d6350c;
+}
+.grass::-webkit-progress-value {
+    background-color: #89E78F;
+}
+
+.water::-webkit-progress-value {
+    background-color: #0A7ABC;
+}
+.electric::-webkit-progress-value {
+    background-color: #EFDB17;
+}
+.ground::-webkit-progress-value {
+    background-color: #E78320;
+}
+.rock::-webkit-progress-value {
+    background-color: #A1A150;
+}
+.fairy::-webkit-progress-value {
+    background-color: #F8AEC9;
+}
+.poison::-webkit-progress-value {
+    background-color: #7C017C;
+}
+.bug::-webkit-progress-value {
+    background-color: #62960E;
+}
+.dragon::-webkit-progress-value {
+    background-color: #6179A4;
+}
+.psychic::-webkit-progress-value {
+    background-color: #F55792;
+}
+.flying::-webkit-progress-value {
+    background-color: #d6350c;
+}
+.fighting::-webkit-progress-value {
+    background-color: #800B11;
+}
+.normal::-webkit-progress-value {
+    background-color: #ACA974;
+}
+.ghost::-webkit-progress-value {
+    background-color: #96617D;
+}
+.ice::-webkit-progress-value {
+    background-color: #81C0DF;
+}
+.dark::-webkit-progress-value {
+    background-color: #593D29;
+}
+.steel::-webkit-progress-value {
+    background-color: #DFDFE9;
+}
+
+
+
+
+
+

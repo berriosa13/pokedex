@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta
+      name="google-signin-client_id"
+      content="154747240984-158d8d8glfp7jcaatg3uhilhma3eo3sf.apps.googleusercontent.com"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <title>Login</title>
+  </head>
+
+  <body class="vertical-center">
+    <div id="featured">
+      <video autoplay muted loop id="myVideo">
+        <source
+          class="overlay"
+          src="video/pexels-mr-borys-8295528.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+
+    <div class="card image-box rounded" style="width: 45rem">
+      <img
+        src="https://fontmeme.com/permalink/210729/8c92d652b67e3e5fe9ae253bd6e0b24a.png"
+        class="card-img-top home-image"
+        alt="home image"
+      />
+      <div
+        class="google-button"
+        id="my-signin2"
+        data-onsuccess="onSignIn"
+      ></div>
+      <!-- <button class="button is-danger is-centered is-medium is-light google-login">
+        <a href="/auth/google">
+          <i class="fab fa-google left">Log in with Google</i>
+        </a>
+      </button> -->
+      <div class="card-content"></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function onSuccess(googleUser) {
+        let id_token = googleUser.getAuthResponse().id_token;
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/login");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function () {
+          console.log("Signed in as: " + xhr.responseText);
+          if (xhr.responseText == "success") {
+            signOut();
+            location.assign("/pokedex");
+          }
+        };
+        xhr.send(JSON.stringify({ token: id_token }));
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+
+      function renderButton() {
+        gapi.signin2.render("my-signin2", {
+          scope: "profile email",
+          width: 240,
+          height: 50,
+          longtitle: true,
+          theme: "dark",
+          onsuccess: onSuccess,
+          onfailure: onFailure,
+        });
+      }
+    </script>
+
+    <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+    <script
+      src="https://apis.google.com/js/platform.js?onload=renderButton"
+      async
+      defer
+    ></script>
+    <script src="javascript/googleSignOut.js"></script>
+  </body>
+</html>
