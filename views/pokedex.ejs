@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="stylesheets/progressBar.css">
     <link rel="manifest" href="javascript/manifest.json"/>
     <link rel="icon" href="images/icons/favicon.png"/>
+    <link rel="manifest" href="javascript/manifest.json">
     <title>Pokedex-App</title>
   </head>
   <body>
@@ -85,5 +86,14 @@
       crossorigin="anonymous"
     ></script>
     <script src="javascript/main.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+        navigator.serviceWorker.register("javascript/sw.js").then(() => {
+        console.log("Service Worker Registered");
+         });
+       });
+      }
+  </script>
   </body>
 </html>

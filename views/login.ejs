@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="images/icons/favicon.png"/>
+    <link rel="manifest" href="javascript/manifest.json">
     <title>Pokedex-App</title>
   </head>
 
@@ -64,5 +65,14 @@
     ></script>
 
     <script src="javascript/googleSignOut.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+          navigator.serviceWorker.register("javascript/sw.js").then(() => {
+          console.log("Service Worker Registered");
+           });
+         });
+        }
+    </script>
   </body>
 </html>

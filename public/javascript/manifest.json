@@ -49,8 +49,8 @@
         "type": "image/png"
       }
     ],
-    "start_url": "index.html",
+    "start_url": "login.ejs",
     "display": "standalone",
-    "background_color": "#000",
-    "theme_color": "#ffff00"
+    "background_color": "#FFCD00",
+    "theme_color": "#356ABC"
   }
