@@ -240,11 +240,11 @@ progress[role] {
   margin: auto;
 }
 
-.logout-icon {
+.logout-icon, .search-icon {
   width: 2.5rem;
   height: 2.5rem;
   padding: 3px;
-  margin-right: 3px;
+  margin-right: .5rem;
 }
 
 .user-image {
@@ -253,7 +253,7 @@ progress[role] {
   -webkit-border-radius: 50%;
   -o-border-radius: 50%;
   width: 8rem;
-  margin: 1rem auto;
+  margin: .5rem auto;
 }
 
 @media (max-width: 600px) {
