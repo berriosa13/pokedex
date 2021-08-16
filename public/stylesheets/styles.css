@@ -274,17 +274,23 @@ progress[role] {
 }
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: auto;
+  height: min-content;
   width: 100vw;
   font-family: "Open Sans";
-  padding-top: 40px;
-  margin-top: 1.5rem;
+  /* padding-top: 40px; */
+  /* margin-top: 1.5rem; */
   color: #fff;
 }
+
+@media (max-width: 700px) {
+  footer {
+    position: relative;
+  }
+}
+
+
 
 .footer-content {
   display: flex;
