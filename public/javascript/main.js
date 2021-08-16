@@ -6,6 +6,45 @@
     min others => 
 */
 
+// let searchable = [
+//   'Pikachu',
+//   'Charizard', 
+//   'Snorlax',
+//   'Eevee',
+//   'Mew'
+// ];
+
+// const searchInput = document.getElementById('search');
+// const searchWrapper = document.querySelector('.wrapper');
+// const resultsWrapper = document.querySelector('.results');
+
+// searchInput.addEventListener('keyup', (e) => {
+//   console.log(e.target.value);
+//   let results = [];
+//   let input = searchInput.value;
+//   if(input.length) {
+//     results = searchable.filter((item) => {
+//       return item.toLowerCase().includes(input.toLowerCase())
+//     })
+//   }
+//   renderResults(results);
+// });
+
+// function renderResults(results) {
+//   if(!results.length) {
+//     return searchWrapper.classList.remove('show');
+//   }
+//   const content = results.map((item) => {
+//     return `<li><a href="#">${item}</a></li>`
+//   })
+//   .join('');
+
+//   console.log(content);
+
+//   searchWrapper.classList.add('show');
+//   resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+// }
+
 const url = "https://pokeapi.co/api/v2/pokemon/";
 let pokemonName = "";
 // min stat variables

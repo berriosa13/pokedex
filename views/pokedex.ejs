@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/js/fontawesome.js">
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous"/> -->
     <link rel="stylesheet" href="stylesheets/styles.css" />
     <link rel="stylesheet" href="stylesheets/progressBar.css">
     <link rel="manifest" href="javascript/manifest.json"/>
@@ -35,7 +39,7 @@
           </p>
             <img class="user-image" src="<%= user.picture %>" alt="">  
         </div>
-          <form autocomplete="on" class="box">
+          <form autocomplete="chrome-off" class="box">
             <div class="field">
               <h3 class="title">
                 <a href=""
@@ -45,6 +49,7 @@
                     border="0"
                 /></a>
               </h3>
+
               <div class="control">
                 <input
                   type="search"
@@ -54,6 +59,7 @@
                   type="text"
                   placeholder="Pokemon's name..."
                 />
+                <p class="suggestions">Ex. Pikachu, Charizard, Mew, etc...</p>
                 <button
                   class="button is-info is-rounded is-medium"
                   id="search-button"
@@ -79,6 +85,26 @@
         </section>
       </div>
     </div>
+
+    <footer>
+      <div class="footer-content">
+        <h3>Like What You See?</h3>
+        <p> Enjoying my app? Click the icon below to view my portfolio!
+          <ul class="socials">
+            <li><a href="https://anthonyberrios.com/" target="_blank"><img class="website-image" src="images/website.png" alt=""></a></li>
+          </ul>
+         </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-content">
+          <p>copyright &copy;2021 Created and Designed By <span>Anthony Berrios</span> <ul class="socials">
+            <li><a href="https://www.linkedin.com/in/anthony-berrios-b72148192/" target="_blank"><img class="linkedin-image" src="images/linkedin.png" alt="" style="padding-right: .5rem;"></a></li>
+            <li><a href="https://github.com/berriosa13" target="_blank"><img class="github-image" src="images/github.png" alt=""></a></li>
+          </ul> </p>
+
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
