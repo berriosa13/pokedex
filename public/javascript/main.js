@@ -1,49 +1,3 @@
-/*
-    Pokemon max and min stat formulas: x = base_stat
-    max => HP = 2x + 110
-    max others => 2x + 5
-    min => 
-    min others => 
-*/
-
-// let searchable = [
-//   'Pikachu',
-//   'Charizard', 
-//   'Snorlax',
-//   'Eevee',
-//   'Mew'
-// ];
-
-// const searchInput = document.getElementById('search');
-// const searchWrapper = document.querySelector('.wrapper');
-// const resultsWrapper = document.querySelector('.results');
-
-// searchInput.addEventListener('keyup', (e) => {
-//   console.log(e.target.value);
-//   let results = [];
-//   let input = searchInput.value;
-//   if(input.length) {
-//     results = searchable.filter((item) => {
-//       return item.toLowerCase().includes(input.toLowerCase())
-//     })
-//   }
-//   renderResults(results);
-// });
-
-// function renderResults(results) {
-//   if(!results.length) {
-//     return searchWrapper.classList.remove('show');
-//   }
-//   const content = results.map((item) => {
-//     return `<li><a href="#">${item}</a></li>`
-//   })
-//   .join('');
-
-//   console.log(content);
-
-//   searchWrapper.classList.add('show');
-//   resultsWrapper.innerHTML = `<ul>${content}</ul>`;
-// }
 
 const url = "https://pokeapi.co/api/v2/pokemon/";
 let pokemonName = "";
@@ -88,7 +42,7 @@ $("#search-button").click(function (e) {
       let base_exp = "";
 
       if (data.types[0].type.name === "fire") {
-        bg_color = "#FDDFDF";
+        bg_color = "#974948";
         type_color = "#d6350c";
       }
       if (data.types[0].type.name === "grass") {
@@ -104,8 +58,8 @@ $("#search-button").click(function (e) {
         type_color = "#0A7ABC";
       }
       if (data.types[0].type.name === "ground") {
-        bg_color = "#f4e7da";
-        type_color = "#E78320";
+        bg_color = "#726262";
+        type_color = "#B27520";
       }
       if (data.types[0].type.name === "rock") {
         bg_color = "#d5d5d4";
@@ -222,12 +176,12 @@ $("#search-button").click(function (e) {
                 data.types[0].type.name
               }" value="${data.stats[5].base_stat}" max="${data.stats[5].base_stat * 2 + 5}"></progress>
             </div>
-            <p class="ranges">min: 36 &nbsp max: 608</p>
+            <p class="ranges">min: ${data.base_experience} &nbsp max: ${data.base_experience * 2 + 5}</p>
             <div class="progress-bars">
               <p class="attribute">EXP |  ${data.base_experience}</p>
               <progress class="${
                 data.types[0].type.name
-              }" value="${data.base_experience}" max="608"></progress>
+              }" value="${data.base_experience}" max="${data.base_experience * 2 + 5}"></progress>
             </div>
         </div>
     </div>
