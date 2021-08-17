@@ -307,7 +307,8 @@ footer {
   flex-direction: row;
   flex: wrap;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
+  min-width: fit-content;
 }
 
 .footer-content h3 {
