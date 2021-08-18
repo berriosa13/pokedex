@@ -279,8 +279,6 @@ footer {
   height: min-content;
   width: 100vw;
   font-family: "Open Sans";
-  /* padding-top: 40px; */
-  /* margin-top: 1.5rem; */
   color: #fff;
 }
 
@@ -289,8 +287,6 @@ footer {
     position: relative;
   }
 }
-
-
 
 .footer-content {
   display: flex;
