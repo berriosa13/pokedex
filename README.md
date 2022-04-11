@@ -1,8 +1,8 @@
-# pokedex-app
-Pokedex PWA app that allows a user to search a pokemon's name and displays information about that specific pokemon. 
+# pokedéx-app
+Pokédex PWA app that allows a user to search a pokémon's name and displays information about that specific pokémon. 
 
 Technologies Used: HTML, CSS, JavaScript, JQuery, Google Auth2.0
 
-pokeapi used => https://pokeapi.co/
+pokéapi used => https://pokeapi.co/
 
-Try it out LIVE here => https://anthonys-pokedex.herokuapp.com/
+Try it out LIVE here => [Pokédex Web App](https://anthonys-pokedex.herokuapp.com/)
